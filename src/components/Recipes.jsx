@@ -8,9 +8,11 @@ export default function Recipes() {
   const [selectedRecipe, setSelectedRecipe] = useState({})
 
   const handleClick = (recipe) => {
-    setSelectedRecipe(recipe)
+    // setSelectedRecipe(recipe)
+    console.log('clicked')
   };
 
+  console.log(recipeArr);
   return (
     <>
       <div id="recipes" className="antialiased grid grid-cols-3 font-medium mt-8 flex flex-wrap p-3">

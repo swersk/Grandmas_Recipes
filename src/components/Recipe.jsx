@@ -11,6 +11,10 @@ export default function Recipe() {
   // Find the correct recipe based on the slug
   const recipe = recipes.find(r => `${r.title.toLowerCase().replace(/\s+/g, '-')}` === recipeTitle);
 
+  if (!recipe) {
+    return <div>Recipe not found!</div>;
+  }
+
   return (
     <>
       <div>{recipe.title}</div>

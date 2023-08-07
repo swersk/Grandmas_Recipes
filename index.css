@@ -11,7 +11,8 @@
   /* background: #f472b6 */
   /* background: #f9a8d4; */
   /* background: 	#E8E8E8 */
-  background: 	#E0E0E0
+  /* background: 	#E0E0E0 */
+  background: linear-gradient(to right, #C0C0C0, white, #C0C0C0);
 }
 
 .subheader-button {
@@ -22,7 +23,7 @@
 
 .subheader-button:hover {
   transform: scale(1.2);
-  font-weight: 700;
+  font-weight: 900;
 }
 
 #root {

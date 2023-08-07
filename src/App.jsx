@@ -5,7 +5,6 @@ import Recipes from './components/Recipes';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import SubHeader from './components/SubHeader';
-
 import { Outlet } from 'react-router-dom';
 
 export const HomeContext = createContext();
@@ -20,12 +19,9 @@ export default function App() {
     <HomeContext.Provider value={setIsHome} >
       <RecipeContext.Provider value={recipes} >
           <Header />
-          <SubHeader />
-          <Recipes />
+          <Outlet />
           <Footer />
-        <Outlet />
       </RecipeContext.Provider>
     </HomeContext.Provider>
-
   )
 }
