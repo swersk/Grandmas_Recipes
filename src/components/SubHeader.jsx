@@ -8,7 +8,7 @@ export default function SubHeader() {
 
   return (
     <>
-    <div id="subheader" className="text-black mt-1 mb-1 w-full flex flex-row justify-evenly font-dancing-regular text-3xl gap-3 p-5 my-2">
+    <div id="subheader" className="text-black w-full flex flex-row justify-evenly font-dancing-regular text-2xl gap-1 p-0 ">
         <p onClick={handleClick} className="subheader-button"> Mains</p>
         <button onClick={handleClick} className="subheader-button"> Sides</button>
         <button onClick={handleClick} className="subheader-button"> Soups</button>

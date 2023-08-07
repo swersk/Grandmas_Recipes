@@ -6,7 +6,7 @@ import Recipe from "./Recipe.jsx";
 export default function Recipes() {
   let recipeArr = useContext(RecipeContext);
   const [selectedRecipe, setSelectedRecipe] = useState({})
-  const { setIsHome } = useContext(HomeContext);
+  const { isHome, setIsHome } = useContext(HomeContext);
 
   const handleClick = (recipe) => {
     setIsHome(false);

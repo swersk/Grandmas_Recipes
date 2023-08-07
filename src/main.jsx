@@ -11,7 +11,6 @@ import Recipe from "./components/Recipe.jsx";
 import Recipes from "./components/Recipes.jsx";
 import Error from "./components/Error";
 import "../index.css";
-//import 'tailwindcss/tailwind.css';
 
 const router = createBrowserRouter(
   createRoutesFromElements(

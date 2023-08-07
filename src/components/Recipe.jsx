@@ -1,10 +1,13 @@
-import React, { useContext } from "react";
-import { RecipeContext } from "../App.jsx";
+import { useContext, useEffect } from "react";
+import { RecipeContext, HomeContext } from "../App.jsx";
 import { useParams } from "react-router-dom";
+
 
 export default function Recipe() {
   const { recipeTitle } = useParams();
   const recipes = useContext(RecipeContext);
+  const { setIsHome } = useContext(HomeContext);
+
 
   // Find the correct recipe based on the slug
   const recipe = recipes.find(
@@ -14,6 +17,10 @@ export default function Recipe() {
   if (!recipe) {
     return <div>Recipe not found!</div>;
   }
+
+  useEffect(() => {
+    setIsHome(false);
+  }, [])
 
   return (
     <>
@@ -31,22 +38,22 @@ export default function Recipe() {
       </div>
       <div
         id="ingredients-and-directions"
-        className="text-black flex justify-evenly"
+        className="text-black flex justify-center grid grid-cols-2 p-4"
       >
-        <div>
-          <h2 className="text-3xl font-dancing-bold text-left">Ingredients</h2>
+        <div className="ml-16">
+          <h2 className="text-4xl font-dancing-bold text-left mb-2 leading-relaxed">Ingredients</h2>
           {recipe.ingredients.map((ingredient, index) => {
             return (
-              <li className="text-left" key={index}>
+              <li className="text-left text-1xl leading-relaxed" key={index}>
                 {ingredient}
               </li>
             );
           })}
         </div>
 
-        <div className=" text-black text-left">
-          <h2 className="text-3xl text-black font-dancing-bold">Directions</h2>
-          <ol className="text-left">
+        <div className=" text-black text-left mr-16 ">
+          <h2 className="text-4xl text-black font-dancing-bold mb-2">Directions</h2>
+          <ol className="text-left text-1xl">
             {recipe.directions.map((direction, index) => {
               return <li key={index}>{direction}</li>;
             })}
