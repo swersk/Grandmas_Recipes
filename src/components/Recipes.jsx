@@ -1,14 +1,14 @@
 import { useContext, useState } from "react";
-import { RecipeContext } from "../App.jsx";
+import { RecipeContext, HomeContext } from "../App.jsx";
 import { Link } from "react-router-dom";
 import Recipe from "./Recipe.jsx";
 
 export default function Recipes() {
   let recipeArr = useContext(RecipeContext);
   const [selectedRecipe, setSelectedRecipe] = useState({})
+  const { setIsHome } = useContext(HomeContext);
 
   const handleClick = (recipe) => {
-    // setSelectedRecipe(recipe)
     setIsHome(false);
   };
 

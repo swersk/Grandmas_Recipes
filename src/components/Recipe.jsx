@@ -15,21 +15,27 @@ export default function Recipe() {
     return <div>Recipe not found!</div>;
   }
 
+
+
   return (
     <>
-    <div className="text-5xl">{recipe.title}</div>
+    <div
+      style={{
+        backgroundImage: `url(${recipe.img})`, backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center'}}
+      className="text-5xl h-24 font-gamberino">{recipe.title}</div>
       <div id="ingredients-and-directions" className="text-black flex justify-evenly">
-
           <div>
-            <h2 className="text-2xl">Ingredients</h2>
+            <h2 className="text-3xl font-dancing-bold">Ingredients</h2>
             {recipe.ingredients.map((ingredient, index) => {
               return <li key={index}>{ingredient}</li>;
             })}
         </div>
 
         <div className=" text-black">
-          <h2 className="text-2xl text-black">Directions</h2>
-          <ol>
+          <h2 className="text-3xl text-black font-dancing-bold">Directions</h2>
+          <ol className="justify-start">
             {recipe.directions.map((direction, index) => {
               return <li key={index}>{direction}</li>;
             })}
@@ -40,7 +46,7 @@ export default function Recipe() {
       <div>
       <img src={recipe.img} alt={recipe.alt_text} width="100" height="100" />
         <div id="video" className="justify-center">
-          <h1>Video</h1>
+          <h1>Video {recipe.img}</h1>
           <video src={recipe.video} controls>
             <source src={recipe.video} type="video/mp4" />
             Your browser does not support the video tag.
