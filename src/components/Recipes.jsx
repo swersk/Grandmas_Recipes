@@ -9,7 +9,7 @@ export default function Recipes() {
 
   const handleClick = (recipe) => {
     // setSelectedRecipe(recipe)
-    console.log('clicked')
+    setIsHome(false);
   };
 
   console.log(recipeArr);

@@ -16,7 +16,7 @@ export default function App() {
   const [isHome, setIsHome] = useState(true);
 
   return (
-    <HomeContext.Provider value={setIsHome} >
+    <HomeContext.Provider value={{isHome, setIsHome}} >
       <RecipeContext.Provider value={recipes} >
           <Header />
           <Outlet />

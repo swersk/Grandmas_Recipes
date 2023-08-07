@@ -1,15 +1,15 @@
-import React, { useContext} from "react";
+import React, { useContext } from "react";
 import { RecipeContext } from "../App.jsx";
 import { useParams } from "react-router-dom";
 
 export default function Recipe() {
-
   const { recipeTitle } = useParams();
   const recipes = useContext(RecipeContext);
-  console.log('received')
 
   // Find the correct recipe based on the slug
-  const recipe = recipes.find(r => `${r.title.toLowerCase().replace(/\s+/g, '-')}` === recipeTitle);
+  const recipe = recipes.find(
+    (r) => `${r.title.toLowerCase().replace(/\s+/g, "-")}` === recipeTitle
+  );
 
   if (!recipe) {
     return <div>Recipe not found!</div>;
@@ -17,31 +17,35 @@ export default function Recipe() {
 
   return (
     <>
-      <div>{recipe.title}</div>
+    <div className="text-5xl">{recipe.title}</div>
+      <div id="ingredients-and-directions" className="text-black flex justify-evenly">
+
+          <div>
+            <h2 className="text-2xl">Ingredients</h2>
+            {recipe.ingredients.map((ingredient, index) => {
+              return <li key={index}>{ingredient}</li>;
+            })}
+        </div>
+
+        <div className=" text-black">
+          <h2 className="text-2xl text-black">Directions</h2>
+          <ol>
+            {recipe.directions.map((direction, index) => {
+              return <li key={index}>{direction}</li>;
+            })}
+          </ol>
+        </div>
+
+      </div>
+      <div>
       <img src={recipe.img} alt={recipe.alt_text} width="100" height="100" />
-
-      <div>
-        <h1>Video</h1>
-        <video src={recipe.video} controls>
-          <source src={recipe.video} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      <div>
-        <h2>Ingredients</h2>
-        {recipe.ingredients.map((ingredient, index) => {
-          return <li key={index}>{ingredient}</li>;
-        })}
-      </div>
-
-      <div>
-        <h2>Directions</h2>
-        <ol>
-          {recipe.directions.map((direction, index) => {
-            return <li key={index}>{direction}</li>;
-          })}
-        </ol>
+        <div id="video" className="justify-center">
+          <h1>Video</h1>
+          <video src={recipe.video} controls>
+            <source src={recipe.video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     </>
   );
