@@ -6,8 +6,28 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  justify-content: space-between;
 }
 
+#back-button {
+  padding: 8px 12px;
+  margin: 5;
+  font-size: 36px;
+  background-color: #bfdbfe;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#search-bar {
+  background-color: #d1d5db;
+  width: 220px;
+}
+
+
+#back-button:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 #subheader {
   /* background: #f472b6 */
