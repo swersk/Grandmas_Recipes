@@ -73,16 +73,22 @@ export default function Recipe() {
 
       </div>
       <div className="text-black flex justify-center items-center justify-evenly bg-blue-100 h-8 p-10">
-      <i class="fa-regular fa-calendar-check" onClick={handleMade}>  I made this!</i>
+      <i className="fa-regular fa-calendar-check" onClick={handleMade}>  I made this!</i>
 
-                <i class="fa-regular fa-heart" onClick={handleLike}>  I like this!</i>
+                <i className="fa-regular fa-heart" onClick={handleLike}>  I like this!</i>
       </div>
       <div>
-        <div id="video" className="flex justify-center items-center  p-12 ">
-          <video className="w-full" src={recipe.video} controls>
-            <source src={recipe.video} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+        <div id="video" className="flex justify-center items-center p-12 ">
+        <iframe
+        width="560"
+        height="315"
+        src={recipe.video}
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+        >
+        </iframe>
         </div>
       </div>
     </>

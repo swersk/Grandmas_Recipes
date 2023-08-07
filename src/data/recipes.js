@@ -30,7 +30,7 @@ const recipesData = [
     title: "Egg Salad Sandwich",
     img: './eggSalad.jpg',
     alt_text: 'Egg salad on toast',
-    video: './[Final] eggSaladVideo.mp4',
+    video: 'https://youtu.be/uKZ6mJx5fMY',
     ingredients: ["2 hard boiled eggs per person", 'mayonnaise', 'salt & pepper', 'bread of choice (English muffin, toast, bagel, Italian bread)'],
     directions: ["1. Mush 2+ hard boiled eggs in a bowl. Remove the yolk if you're watching your cholesterol!", "2. Add salt and pepper.", "3. Add mayo. Mix.", "4. Toast your bread of choice (Italian bread, english muffin, bagel)", "5. Add the egg salad to the bread and enjoy!"],
     tags: ['mains']
