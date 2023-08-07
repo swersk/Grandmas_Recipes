@@ -2,11 +2,14 @@ import React, { useContext} from "react";
 import { RecipeContext } from "../App.jsx";
 import { useParams } from "react-router-dom";
 
-export default function Recipe({ recipe }) {
+export default function Recipe() {
 
   const { recipeTitle } = useParams();
   const recipes = useContext(RecipeContext);
   console.log('received')
+
+  // Find the correct recipe based on the slug
+  const recipe = recipes.find(r => `${r.title.toLowerCase().replace(/\s+/g, '-')}` === recipeTitle);
 
   return (
     <>

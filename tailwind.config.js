@@ -12,7 +12,7 @@ export default {
         'satoshi-light': ['Satoshi-Light', 'mono'],
         'satoshi-regular': ['Satoshi-Regular', 'mono'],
         'satoshi-medium': ['Satoshi-Medium', 'mono'],
-        'satoshi-bold': ['Satoshi-Bold', 'mono']
+        'gambarino': ['Gambarino-Regular', 'mono'],
       }
     },
   },

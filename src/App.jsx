@@ -3,6 +3,7 @@ import { useState, createContext } from 'react';
 import recipesData from './data/recipes';
 import Recipes from './components/Recipes';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import SubHeader from './components/SubHeader';
 
 import { Outlet } from 'react-router-dom';
@@ -16,15 +17,15 @@ export default function App() {
   const [isHome, setIsHome] = useState(true);
 
   return (
-    <div className="min-h-screen m-0 p-0">
     <HomeContext.Provider value={setIsHome} >
       <RecipeContext.Provider value={recipes} >
           <Header />
           <SubHeader />
           <Recipes />
+          <Footer />
         <Outlet />
       </RecipeContext.Provider>
     </HomeContext.Provider>
-    </div>
+
   )
 }
