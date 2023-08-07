@@ -22,6 +22,14 @@ export default function Recipe() {
     setIsHome(false);
   }, [])
 
+  const handleMade = () => {
+    console.log('Made!')
+  }
+
+  const handleLike = () => {
+    console.log('Liked!')
+  }
+
   return (
     <>
       <div
@@ -30,21 +38,24 @@ export default function Recipe() {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center center",
-          opacity: "0.9",
+          opacity: '0.9',
         }}
-        className="text-5xl h-96 font-gamberino flex justify-center items-center align-middle font-extrabold"
+        className="text-5xl h-96 font-satoshi-medium flex justify-center items-center align-middle font-extrabold text-black shadow-lg"
       >
         {recipe.title}
       </div>
+
+
+
       <div
         id="ingredients-and-directions"
         className="text-black flex justify-center grid grid-cols-2 p-4"
       >
         <div className="ml-16">
-          <h2 className="text-4xl font-dancing-bold text-left mb-2 leading-relaxed">Ingredients</h2>
+          <h2 className="text-3xl font-dancing-bold text-left mb-2 leading-relaxed">Ingredients</h2>
           {recipe.ingredients.map((ingredient, index) => {
             return (
-              <li className="text-left text-1xl leading-relaxed" key={index}>
+              <li className="text-left text-1xl leading-relaxed font-satoshi-regular" key={index}>
                 {ingredient}
               </li>
             );
@@ -52,13 +63,19 @@ export default function Recipe() {
         </div>
 
         <div className=" text-black text-left mr-16 ">
-          <h2 className="text-4xl text-black font-dancing-bold mb-2">Directions</h2>
-          <ol className="text-left text-1xl">
+          <h2 className="text-3xl text-black font-dancing-bold mb-2">Directions</h2>
+          <ol className="text-left text-1xl font-satoshi-regular leading-8">
             {recipe.directions.map((direction, index) => {
               return <li key={index}>{direction}</li>;
             })}
           </ol>
         </div>
+
+      </div>
+      <div className="text-black flex justify-center items-center justify-evenly bg-blue-100 h-8 p-10">
+      <i class="fa-regular fa-calendar-check" onClick={handleMade}>  I made this!</i>
+
+                <i class="fa-regular fa-heart" onClick={handleLike}>  I like this!</i>
       </div>
       <div>
         <div id="video" className="flex justify-center items-center  p-12 ">

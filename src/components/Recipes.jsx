@@ -31,7 +31,7 @@ export default function Recipes() {
                   />
                 </div>
                 <div className="h-16">
-                <div className="h-14 mt-2 text-black text-2xl font-gambarinor">
+                <div className="h-14 mt-2 text-black font-satoshi-bold">
                   {recipe.title}
                 </div>
                 </div>
