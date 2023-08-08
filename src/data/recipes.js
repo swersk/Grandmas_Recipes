@@ -36,8 +36,8 @@ const recipesData = [
     tags: ['mains']
   },
   {
-    title: "Egg Salad Sandwich",
-    img: './eggSalad.jpg',
+    title: "Coming soon...",
+    img: './coming-soon.webp',
     alt_text: 'Egg salad on toast',
     video: 'https://www.youtube.com/embed/uKZ6mJx5fMY',
     ingredients: ["2 hard boiled eggs per person", 'mayonnaise', 'salt & pepper', 'bread of choice (English muffin, toast, bagel, Italian bread)'],
@@ -45,8 +45,8 @@ const recipesData = [
     tags: ['mains']
   },
   {
-    title: "Egg Salad Sandwich",
-    img: './eggSalad.jpg',
+    title: "Coming soon...",
+    img: './coming-soon.webp',
     alt_text: 'Egg salad on toast',
     video: 'https://www.youtube.com/embed/uKZ6mJx5fMY',
     ingredients: ["2 hard boiled eggs per person", 'mayonnaise', 'salt & pepper', 'bread of choice (English muffin, toast, bagel, Italian bread)'],

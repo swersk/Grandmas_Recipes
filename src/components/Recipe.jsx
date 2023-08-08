@@ -7,7 +7,7 @@ export default function Recipe() {
   const recipes = useContext(RecipeContext);
   const { setIsHome } = useContext(HomeContext);
 
-  // Find the correct recipe based on the slug
+
   const recipe = recipes.find(
     (r) => `${r.title.toLowerCase().replace(/\s+/g, "-")}` === recipeTitle
   );
@@ -74,17 +74,6 @@ export default function Recipe() {
           </ol>
         </div>
       </div>
-      <div className="text-black flex justify-center items-center justify-evenly bg-blue-100 h-8 p-10">
-        <i className="fa-regular fa-calendar-check" onClick={handleMade}>
-          {" "}
-          I made this!
-        </i>
-
-        <i className="fa-regular fa-heart" onClick={handleLike}>
-          {" "}
-          I like this!
-        </i>
-      </div>
       <div>
         <div id="video" className="flex justify-center items-center p-12 ">
           <iframe
@@ -101,3 +90,16 @@ export default function Recipe() {
     </>
   );
 }
+
+
+      {/* <div className="text-black flex justify-center items-center justify-evenly bg-blue-100 h-8 p-10">
+        <i className="fa-regular fa-calendar-check" onClick={handleMade}>
+          {" "}
+          I made this!
+        </i>
+
+        <i className="fa-regular fa-heart" onClick={handleLike}>
+          {" "}
+          I like this!
+        </i>
+      </div> */}

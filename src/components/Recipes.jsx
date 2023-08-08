@@ -6,7 +6,7 @@ import Recipe from "./Recipe.jsx";
 
 export default function Recipes() {
 
-  const { isHome, setIsHome } = useContext(HomeContext);
+  const { isHome, setIsHome, filteredRecipes, isFiltered, setIsFilterd } = useContext(HomeContext);
   let recipeArr = useContext(RecipeContext);
   const [selectedRecipe, setSelectedRecipe] = useState({})
 
@@ -21,30 +21,36 @@ export default function Recipes() {
 
   return (
     <>
-      <div id="recipes" className="antialiased grid grid-cols-3 font-medium mt-8 flex flex-wrap p-3">
-        {recipeArr.map((recipe, index) => {
-          return (
-            <Link
-              to={`/${recipe.title.toLowerCase().replace(/\s+/g, '-')}`}
-              key={index}
-              className="grid place-content-center p-3 h-96 "
-              onClick={() => handleClick(recipe)}>
-                <div className="w-full h-80 flex justify-center align-middle">
-                  <img
-                    src={recipe.img}
-                    alt={recipe.alt_text}
-                    className="w-72 h-70 rounded-md object-cover scale-95 hover:scale-100 ease-in duration-100 hover:shadow-lg "
-                  />
-                </div>
-                <div className="h-16">
-                <div className="h-14 mt-2 text-black font-satoshi-bold">
-                  {recipe.title}
-                </div>
-                </div>
-            </Link>
-          );
-        })}
-      </div>
+    {isFiltered ? (
+      <p>Filtered Recipes here</p>
+    ) : (
+      <div id="recipes" className="antialiased grid grid-cols-3 font-medium mt-8 flex justify-center  p-3">
+      {recipeArr.map((recipe, index) => {
+        return (
+          <Link
+            to={`/${recipe.title.toLowerCase().replace(/\s+/g, '-')}`}
+            key={index}
+            className="grid place-content-center p-3 h-96 "
+            onClick={() => handleClick(recipe)}>
+              <div className="w-full h-80 flex justify-center align-middle">
+                <img
+                  src={recipe.img}
+                  alt={recipe.alt_text}
+                  className="w-72 h-70 rounded-md object-cover scale-95 hover:scale-100 ease-in duration-100 hover:shadow-lg "
+                />
+              </div>
+              <div className="h-16">
+              <div className="h-14 mt-2 text-black font-satoshi-bold">
+                {recipe.title}
+              </div>
+              </div>
+          </Link>
+        );
+      })}
+    </div>
+     )}
     </>
-  );
+  )
 }
+
+

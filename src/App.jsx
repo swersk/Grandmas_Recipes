@@ -14,10 +14,11 @@ export default function App() {
 
   const [recipes, setRecipes] = useState(recipesData);
   const [filteredRecipes, setFilteredRecipes] = useState([])
+  const [isFiltered, setIsFilterd] = useState(false);
   const [isHome, setIsHome] = useState(true);
 
   return (
-    <HomeContext.Provider value={{isHome, setIsHome, filteredRecipes, setFilteredRecipes}} >
+    <HomeContext.Provider value={{isHome, setIsHome, filteredRecipes, setFilteredRecipes, isFiltered, setIsFilterd}} >
       <RecipeContext.Provider value={recipes} >
           <Header />
           <Outlet />

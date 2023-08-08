@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { RecipeContext } from "../App.jsx";
+import { RecipeContext, HomeContext } from "../App.jsx";
 // import { RecipeContext } from "../App.jsx";
 // import SearchIcon from "@mui/icons-material/Search";
 // import { TextField } from "@mui/material";
@@ -8,6 +8,8 @@ import { RecipeContext } from "../App.jsx";
 export default function Search() {
    const [query, setQuery] = useState("");
    let recipeArr = useContext(RecipeContext);
+   const { filteredRecipes, setFilteredRecipes, isFiltered, setIsFilterd } = useContext(HomeContext);
+
 
   const handleChange = (e) => {
 
@@ -22,6 +24,7 @@ export default function Search() {
       if (doesMatch.length >=1 ) {
        //only show recipes from the doesMatch array
        setFilteredRecipes(doesMatch)
+       setIsFilterd(true);
       }
     } else {
       console.log('Query too short')
@@ -31,7 +34,7 @@ export default function Search() {
   return (
     <>
       <i
-      className="fa-solid fa-magnifying-glass text-2xl ml-1 text-black"
+      className="fa-solid fa-magnifying-glass text-lg ml-3 text-black"
       >
       <input
         type="text"
@@ -39,7 +42,7 @@ export default function Search() {
         placeholder="Search..."
         autoFocus
         onChange={handleChange}
-        className="bg-white text-1xl mx-0 w-12 font-satoshi-light"
+        className="bg-white text-2xl mx-0 w-8 ml-2 font-satoshi-light"
       />
       </i>
     </>

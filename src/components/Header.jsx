@@ -19,19 +19,19 @@ export default function Header() {
     <>
       {isHome ? (
         <>
-          <div id="header" className="font-dancing-bold text-5xl h-16 flex items-center justify-evenly text-black bg-gradient-to-r from-blue-300 via-blue-200/70 to-blue-300">
+          <div id="header" className="font-dancing-bold h-16 flex items-center justify-between content-between text-black bg-gradient-to-r from-blue-300 via-blue-200/70 to-blue-300">
           <Search />
-          <p>Grandma's Recipes</p>
-          <Link className="rounded-full bg-slate-200 p-4 hover:bg-blue-100/80 transition-colors duration-150" to="/about">About</Link>
+          <p className="text-5xl">Grandma's Recipes</p>
+          <Link className="rounded-full text-3xl bg-blue-200 p-2 mr-5 hover:bg-blue-100/80 transition-colors duration-150" to="/about">About</Link>
           </div>
         </>
       ) : (
         <>
         <div >
-            <div id="header" className="font-dancing-bold text-5xl h-16 flex items-center justify-center  text-black bg-gradient-to-r from-blue-300 via-blue-200/70 to-blue-300">
-            <Link to="/">Home</Link>
+            <div id="header" className="font-dancing-bold text-5xl h-16 flex items-center justify-between content-between  text-black bg-gradient-to-r from-blue-300 via-blue-200/70 to-blue-300">
+            <Link className="rounded-full text-3xl bg-blue-200 p-2 mr-5 hover:bg-blue-100/80 transition-colors duration-150 ml-3" to="/">Home</Link>
               <p>Grandma's Recipes</p>
-              <i className="fa-solid fa-utensils fa-2xs"></i>
+              <Link className="rounded-full text-3xl bg-blue-200 p-2 mr-5 hover:bg-blue-100/80 transition-colors duration-150" to="/about">About</Link>
             </div>
           </div>
         </>
