@@ -1,18 +1,24 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { RecipeContext, HomeContext } from "../App.jsx";
 import { Link } from "react-router-dom";
 import Recipe from "./Recipe.jsx";
 
+
 export default function Recipes() {
+
+  const { isHome, setIsHome } = useContext(HomeContext);
   let recipeArr = useContext(RecipeContext);
   const [selectedRecipe, setSelectedRecipe] = useState({})
-  const { isHome, setIsHome } = useContext(HomeContext);
+
 
   const handleClick = (recipe) => {
     setIsHome(false);
   };
 
-  console.log(recipeArr);
+  useEffect(() => {
+    setIsHome(true)
+  }, [])
+
   return (
     <>
       <div id="recipes" className="antialiased grid grid-cols-3 font-medium mt-8 flex flex-wrap p-3">
