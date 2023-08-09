@@ -93,16 +93,3 @@ export default function Recipe() {
     </>
   );
 }
-
-
-      {/* <div className="text-black flex justify-center items-center justify-evenly bg-blue-100 h-8 p-10">
-        <i className="fa-regular fa-calendar-check" onClick={handleMade}>
-          {" "}
-          I made this!
-        </i>
-
-        <i className="fa-regular fa-heart" onClick={handleLike}>
-          {" "}
-          I like this!
-        </i>
-      </div> */}
