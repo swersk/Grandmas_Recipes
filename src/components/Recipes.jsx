@@ -11,9 +11,6 @@ export default function Recipes() {
     setIsHome(false);
   };
 
-  useEffect(() => {
-    setIsHome(true);
-  }, []);
 
   const handleShowAll = () => {
     console.log('Show All')
