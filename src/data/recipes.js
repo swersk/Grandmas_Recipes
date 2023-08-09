@@ -36,7 +36,7 @@ const recipesData = [
     tags: ['mains']
   },
   {
-    title: "Coming soon...",
+    title: "Macaroni Salad",
     img: './coming-soon.webp',
     alt_text: 'Egg salad on toast',
     video: 'https://www.youtube.com/embed/uKZ6mJx5fMY',
@@ -45,7 +45,7 @@ const recipesData = [
     tags: ['mains']
   },
   {
-    title: "Coming soon...",
+    title: "Spinach Soup",
     img: './coming-soon.webp',
     alt_text: 'Egg salad on toast',
     video: 'https://www.youtube.com/embed/uKZ6mJx5fMY',

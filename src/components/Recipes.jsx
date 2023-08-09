@@ -1,22 +1,19 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { RecipeContext, HomeContext } from "../App.jsx";
 import { Link } from "react-router-dom";
 
 export default function Recipes() {
-  const { isHome, setIsHome, filteredRecipes, isFiltered, setIsFiltered, recipesData, setRecipes, setFilteredRecipes } =
+  const { setIsHome, filteredRecipes, isFiltered, setIsFiltered, setFilteredRecipes } =
     useContext(HomeContext);
   let recipeArr = useContext(RecipeContext);
-  const [selectedRecipe, setSelectedRecipe] = useState({});
 
-  const handleClick = (recipe) => {
+  const handleClick = () => {
     setIsHome(false);
   };
 
   useEffect(() => {
     setIsHome(true);
   }, []);
-
-
 
   const handleShowAll = () => {
     console.log('Show All')
@@ -29,7 +26,7 @@ export default function Recipes() {
     <>
       {isFiltered ? (
         <>
-        <Link to="/"><button onClick={handleShowAll} className="rounded-full text-3xl bg-blue-200 p-4 mr-5 hover:bg-blue-100/80 transition-colors duration-150 ml-32">Show All</button></Link>
+        <Link to="/"><button onClick={handleShowAll} className="rounded-full text-3xl bg-blue-200 p-3 mr-5 hover:bg-blue-100/80 transition-colors duration-150 ml-32 font-satoshi-medium mt-8">Show All</button></Link>
         <div
           id="recipes"
           className="antialiased grid grid-cols-3 gap-0 font-medium mt-8 flex justify-center p-3 ml-24 mr-24"

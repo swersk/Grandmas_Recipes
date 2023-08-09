@@ -20,14 +20,6 @@ export default function Recipe() {
     setIsHome(false);
   }, []);
 
-  const handleMade = () => {
-    console.log("Made!");
-  };
-
-  const handleLike = () => {
-    console.log("Liked!");
-  };
-
   return (
     <>
     <div className="recipe-container relative">
@@ -39,7 +31,6 @@ export default function Recipe() {
           backgroundPosition: "center center",
           opacity: "0.8",
         }}
-        // className="relative text-5xl h-80 font-satoshi-medium flex justify-center items-center align-middle font-extrabold text-white shadow-lg overlay"
         className="recipe-image text-5xl h-80 font-satoshi-medium flex justify-center items-center font-extrabold text-white shadow-lg"
       >
         {recipe.title}
