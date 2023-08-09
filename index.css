@@ -29,6 +29,23 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.recipe-container {
+  width: auto;
+  height: auto;
+  position: relative;
+}
+
+.recipe-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
 #subheader {
   /* background: #f472b6 */
   /* background: #f9a8d4; */

@@ -30,6 +30,7 @@ export default function Recipe() {
 
   return (
     <>
+    <div className="recipe-container relative">
       <div
         style={{
           backgroundImage: `url(${recipe.img})`,
@@ -38,23 +39,25 @@ export default function Recipe() {
           backgroundPosition: "center center",
           opacity: "0.8",
         }}
-        className="text-5xl h-80 font-satoshi-medium flex justify-center items-center align-middle font-extrabold text-black shadow-lg"
+        // className="relative text-5xl h-80 font-satoshi-medium flex justify-center items-center align-middle font-extrabold text-white shadow-lg overlay"
+        className="recipe-image text-5xl h-80 font-satoshi-medium flex justify-center items-center font-extrabold text-white shadow-lg"
       >
         {recipe.title}
+      </div>
       </div>
 
       <div
         id="ingredients-and-directions"
-        className="text-black flex justify-center grid grid-cols-2 p-4"
+        className="text-black flex justify-center grid grid-cols-2 p-4 "
       >
-        <div className="ml-16">
-          <h2 className="text-3xl font-dancing-bold text-left mb-2 leading-relaxed">
+        <div className="ml-48 w-auto">
+          <h2 className="text-3xl font-dancing-bold text-left mb-2 ml-16 leading-relaxed">
             Ingredients
           </h2>
           {recipe.ingredients.map((ingredient, index) => {
             return (
               <li
-                className="text-left text-1xl leading-relaxed font-satoshi-regular"
+                className="text-left text-1xl leading-relaxed font-satoshi-regular ml-16"
                 key={index}
               >
                 {ingredient}
@@ -63,7 +66,7 @@ export default function Recipe() {
           })}
         </div>
 
-        <div className=" text-black text-left mr-16 ">
+        <div className=" text-black text-left mr-72  w-full">
           <h2 className="text-3xl text-black font-dancing-bold mb-2">
             Directions
           </h2>
