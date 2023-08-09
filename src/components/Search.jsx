@@ -8,7 +8,7 @@ import { RecipeContext, HomeContext } from "../App.jsx";
 export default function Search() {
    const [query, setQuery] = useState("");
    let recipeArr = useContext(RecipeContext);
-   const { filteredRecipes, setFilteredRecipes, isFiltered, setIsFilterd } = useContext(HomeContext);
+   const { filteredRecipes, setFilteredRecipes, isFiltered, setIsFiltered, isHome, setIsHome } = useContext(HomeContext);
 
 
   const handleChange = (e) => {
@@ -16,7 +16,6 @@ export default function Search() {
     if (e.target.value.length >= 3) {
       setQuery(e.target.value.toLowerCase());
 
-      //return array that filters recipe titles by query
       const doesMatch = recipeArr.filter(recipe => {
         return recipe.title.toLowerCase().includes(e.target.value.toLowerCase())
       })
@@ -24,10 +23,9 @@ export default function Search() {
       if (doesMatch.length >=1 ) {
        //only show recipes from the doesMatch array
        setFilteredRecipes(doesMatch)
-       setIsFilterd(true);
+       setIsFiltered(true);
+       setIsHome(false);
       }
-    } else {
-      console.log('Query too short')
     }
   };
 
