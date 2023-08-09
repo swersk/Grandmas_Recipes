@@ -75,7 +75,7 @@ export default function Recipe() {
         </div>
       </div>
       <div>
-        <div id="video" className="flex justify-center items-center p-12 ">
+        <div id="video" className="flex justify-center items-center p-6 ">
           <iframe
             width="560"
             height="315"

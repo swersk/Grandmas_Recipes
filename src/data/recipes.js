@@ -22,8 +22,8 @@ const recipesData = [
     img: './string-beans.JPG',
     alt_text: 'String beans with potatoes and red onions',
     video: 'https://www.youtube.com/embed/rU-XRLKIy_4',
-    ingredients: ["TBD"],
-    directions: ["TBD"],
+    ingredients: ["Coming soon.."],
+    directions: ["Coming soon.."],
     tags: ['veggies', 'sides']
   },
   {

@@ -34,7 +34,7 @@ export default function Search() {
   return (
     <>
       <i
-      className="fa-solid fa-magnifying-glass text-lg ml-3 text-black"
+      className="fa-solid fa-magnifying-glass text-lg ml-20 text-black"
       >
       <input
         type="text"
