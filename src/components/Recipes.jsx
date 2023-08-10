@@ -26,7 +26,7 @@ export default function Recipes() {
         <Link to="/"><button onClick={handleShowAll} className="rounded-full text-3xl bg-blue-200 p-3 mr-5 hover:bg-blue-100/80 transition-colors duration-150 ml-32 font-satoshi-medium mt-8">Show All</button></Link>
         <div
           id="recipes"
-          className="antialiased  font-medium mt-8 flex justify-left h-screen p-3 ml-24 mr-24 border-2 border-black"
+          className="antialiased  font-medium mt-8 flex justify-left h-screen p-3 ml-24 mr-24"
         >
           {filteredRecipes.map((recipe, index) => {
             return (
@@ -56,7 +56,7 @@ export default function Recipes() {
       ) : (
         <div
           id="recipes"
-          className="antialiased grid grid-cols-3 gap-0 font-medium mt-8 flex justify-center p-7 ml-24 mr-24 h-screen"
+          className="antialiased grid grid-cols-3 gap-0 font-medium mt-3 flex justify-center p-7 ml-32 mr-32 h-screen"
         >
           {recipeArr.map((recipe, index) => {
             return (
@@ -66,11 +66,11 @@ export default function Recipes() {
                 className="flex flex-col items-center justify-center h-96"
                 onClick={() => handleClick(recipe)}
               >
-                <div className="w-full h-80 flex justify-center ">
+                <div className="w-full h-80 flex justify-center">
                   <img
                     src={recipe.img}
                     alt={recipe.alt_text}
-                    className="w-72 h-70 rounded-md object-cover scale-95 hover:scale-100 ease-in duration-100 hover:shadow-lg shadow-2xl "
+                    className="w-72 h-70 rounded-md object-cover scale-95 hover:scale-100 ease-in duration-100 hover:shadow-lg shadow-2xl"
                   />
                 </div>
                 <div>
