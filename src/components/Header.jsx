@@ -5,11 +5,12 @@ import Search from './Search';
 
 export default function Header() {
 
-  const { isHome, setIsHome, recipeArr, isAbout, setIsAbout } = useContext(HomeContext);
+  const { isHome, setIsHome, recipeArr, isAbout, setIsAbout, setIsFiltered } = useContext(HomeContext);
   const navigate = useNavigate();
 
   const handleClick = () => {
     setIsHome(true);
+    setIsFiltered(false);
     navigate('/');
   }
 
