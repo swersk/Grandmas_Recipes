@@ -30,7 +30,7 @@ export default function Search() {
 
   return (
     <>
-      <i className="fa-solid fa-magnifying-glass text-2xl ml-32 text-black text-shadow-sm rounded-full bg-blue-200 p-4 mr-32 hover:bg-blue-100/80 transition-colors duration-150 shadow-xl">
+      <i className="fa-solid fa-magnifying-glass text-2xl ml-36 text-black text-shadow-sm rounded-full bg-blue-200 p-4 mr-32 hover:bg-blue-100/80 transition-colors duration-150 shadow-xl">
         <input
           type="text"
           id="search-bar"

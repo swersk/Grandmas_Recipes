@@ -63,7 +63,7 @@ export default function Recipes() {
               <Link
                 to={`/${recipe.title.toLowerCase().replace(/\s+/g, "-")}`}
                 key={index}
-                className="flex flex-col items-center justify-center p-3 h-96 "
+                className="flex flex-col items-center justify-center p-3 h-96"
                 onClick={() => handleClick(recipe)}
               >
                 <div className="w-full h-80 flex justify-center ">

@@ -1,6 +1,6 @@
 const recipesData = [
   {
-    title: "Famous Lentil Soup",
+    title: "Lentil Soup",
     img: './lentil-soup-5.JPG',
     alt_text: 'Lentil Soup',
     video: 'https://www.youtube.com/embed/y5OfVFilTq4',
