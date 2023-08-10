@@ -12,8 +12,8 @@ export default function About() {
   return (
     <>
       <div className="flex">
-        <img src="./us.jpg" alt="pic of Grandma and I" className="mt-20 h-[70vh] mb-36 ml-5" />
-        <div className=" text-black p-4 text-start ml-12 mr-12 mt-16">
+        <img src="./us.jpg" alt="pic of Grandma and I" className="mt-12 h-[70vh] mb-36 ml-5" />
+        <div className=" text-black p-4 text-start ml-12 mr-12 mt-6">
 
         <span className="font-dancing-bold text-5xl">Welcome </span> <span className="font-satoshi-regular text-xl">to this cherished, hidden corner of the internet! This page celebrates the cooking of our wonderful Grandma Jeanette.
           <br /><br />
