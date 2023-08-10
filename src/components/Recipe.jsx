@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 export default function Recipe() {
   const { recipeTitle } = useParams();
   const recipes = useContext(RecipeContext);
-  const { setIsHome } = useContext(HomeContext);
+  const { setIsHome, setIsAbout } = useContext(HomeContext);
 
 
   const recipe = recipes.find(
@@ -18,6 +18,7 @@ export default function Recipe() {
 
   useEffect(() => {
     setIsHome(false);
+    setIsAbout(false);
   }, []);
 
   return (
@@ -41,14 +42,14 @@ export default function Recipe() {
         id="ingredients-and-directions"
         className="text-black flex justify-center grid grid-cols-2 p-4 "
       >
-        <div className="ml-48 w-auto">
-          <h2 className="text-3xl font-dancing-bold text-left mb-2 ml-16 leading-relaxed">
+        <div className="ml-56 w-auto">
+          <h2 className="text-5xl font-dancing-bold text-left mb-2 ml-16 leading-relaxed">
             Ingredients
           </h2>
           {recipe.ingredients.map((ingredient, index) => {
             return (
               <li
-                className="text-left text-1xl leading-relaxed font-satoshi-regular ml-16"
+                className="text-left text-xl leading-relaxed font-satoshi-regular ml-16"
                 key={index}
               >
                 {ingredient}
@@ -58,12 +59,12 @@ export default function Recipe() {
         </div>
 
         <div className=" text-black text-left mr-72  w-full">
-          <h2 className="text-3xl text-black font-dancing-bold mb-2">
+          <h2 className=" mt-2 mb-6 text-5xl text-black font-dancing-bold">
             Directions
           </h2>
-          <ol className="text-left text-1xl font-satoshi-regular leading-8">
+          <ol className=" text-left text-xl font-satoshi-regular">
             {recipe.directions.map((direction, index) => {
-              return <li key={index}>{direction}</li>;
+              return <li className="mb-4"key={index}>{direction}</li>;
             })}
           </ol>
         </div>

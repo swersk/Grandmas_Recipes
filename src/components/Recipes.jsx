@@ -3,7 +3,7 @@ import { RecipeContext, HomeContext } from "../App.jsx";
 import { Link } from "react-router-dom";
 
 export default function Recipes() {
-  const { setIsHome, filteredRecipes, isFiltered, setIsFiltered, setFilteredRecipes } =
+  const { setIsAbout, isAbout, setIsHome, filteredRecipes, isFiltered, setIsFiltered, setFilteredRecipes } =
     useContext(HomeContext);
   let recipeArr = useContext(RecipeContext);
 
@@ -26,14 +26,14 @@ export default function Recipes() {
         <Link to="/"><button onClick={handleShowAll} className="rounded-full text-3xl bg-blue-200 p-3 mr-5 hover:bg-blue-100/80 transition-colors duration-150 ml-32 font-satoshi-medium mt-8">Show All</button></Link>
         <div
           id="recipes"
-          className="antialiased grid grid-cols-3 gap-0 font-medium mt-8 flex justify-center p-3 ml-24 mr-24"
+          className="antialiased grid grid-cols-3 gap-0 font-medium mt-8 flex justify-center p-3 ml-24 mr-24 mb-80"
         >
           {filteredRecipes.map((recipe, index) => {
             return (
               <Link
                 to={`/${recipe.title.toLowerCase().replace(/\s+/g, "-")}`}
                 key={index}
-                className="flex flex-col items-center justify-center p-3 h-96"
+                className="flex flex-col items-center justify-center p-3 h-96 "
                 onClick={() => handleClick(recipe)}
               >
                 <div className="w-full h-80 flex justify-center ">
@@ -44,7 +44,7 @@ export default function Recipes() {
                   />
                 </div>
                 <div>
-                  <div className="h-14 mt-2 text-black text-3xl font-dancing-bold">
+                  <div className="h-14 mt-2 text-black text-3xl font-dancing-bold ">
                     {recipe.title}
                   </div>
                 </div>
@@ -63,14 +63,14 @@ export default function Recipes() {
               <Link
                 to={`/${recipe.title.toLowerCase().replace(/\s+/g, "-")}`}
                 key={index}
-                className="flex flex-col items-center justify-center p-3 h-96"
+                className="flex flex-col items-center justify-center p-3 h-96 "
                 onClick={() => handleClick(recipe)}
               >
                 <div className="w-full h-80 flex justify-center ">
                   <img
                     src={recipe.img}
                     alt={recipe.alt_text}
-                    className="w-72 h-70 rounded-md object-cover scale-95 hover:scale-100 ease-in duration-100 hover:shadow-lg "
+                    className="w-72 h-70 rounded-md object-cover scale-95 hover:scale-100 ease-in duration-100 hover:shadow-lg shadow-2xl "
                   />
                 </div>
                 <div>
