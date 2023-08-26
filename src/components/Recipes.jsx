@@ -32,7 +32,7 @@ export default function Recipes() {
           <Link to="/">
             <button
               onClick={handleShowAll}
-              className="rounded-full text-3xl bg-blue-200 p-3 mr-5 hover:bg-blue-100/80 transition-colors duration-150 ml-32 font-satoshi-medium mt-8"
+              className="rounded-3xl text-3xl bg-blue-200 p-3 mr-5 hover:bg-slate-600 transition-colors duration-150 ml-32 font-satoshi-medium mt-8"
             >
               Show All
             </button>
