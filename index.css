@@ -57,7 +57,11 @@
   }
 
   .content-wrapper {
-    height: 1300px;
+    height: 1500px;
+  }
+
+  #recipe-header {
+    font-size: 28px;
   }
 }
 
