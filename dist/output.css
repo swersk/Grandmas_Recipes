@@ -918,7 +918,12 @@ video {
   }
 
   #recipe-header {
-    font-size: 28px;
+    font-size: 24px;
+  }
+
+  #ingredients-and-directions > div {
+    padding-left: 8px;
+    margin: 8px;
   }
 }
 
@@ -1250,10 +1255,6 @@ body {
 }
 
 @media (min-width: 768px) {
-  .md\:mb-2 {
-    margin-bottom: 0.5rem;
-  }
-
   .md\:mb-6 {
     margin-bottom: 1.5rem;
   }
@@ -1266,12 +1267,20 @@ body {
     margin-left: 14rem;
   }
 
+  .md\:mr-12 {
+    margin-right: 3rem;
+  }
+
   .md\:mr-72 {
     margin-right: 18rem;
   }
 
   .md\:mt-2 {
     margin-top: 0.5rem;
+  }
+
+  .md\:flex {
+    display: flex;
   }
 
   .md\:grid {
@@ -1286,6 +1295,10 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:justify-center {
+    justify-content: center;
+  }
+
   .md\:p-4 {
     padding: 1rem;
   }
@@ -1298,5 +1311,9 @@ body {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:leading-relaxed {
+    line-height: 1.625;
   }
 }

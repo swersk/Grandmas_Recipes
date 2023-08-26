@@ -38,20 +38,20 @@ export default function Recipe() {
       </div>
 
       <div
-        id="ingredients-and-directions "
-        className="text-black flex justify-center md:grid md:grid-cols-2 md:p-4 "
+        id="ingredients-and-directions"
+        className="text-black md:flex md:justify-center md:grid md:grid-cols-2 md:p-4 "
       >
         <div className="md:ml-56 md:w-auto">
           <h2
             id="recipe-header"
-            className="md:text-5xl font-dancing-bold text-left md:mb-2 md:ml-16 leading-relaxed"
+            className="md:text-5xl font-dancing-bold text-left md:mb-6 md:ml-16 leading-relaxed md:mt-2"
           >
             Ingredients
           </h2>
           {recipe.ingredients.map((ingredient, index) => {
             return (
               <li
-                className="text-left md:text-xl leading-relaxed font-satoshi-regular md:ml-16"
+                className="text-left md:text-xl md:leading-relaxed font-satoshi-regular md:ml-16 md:mr-12"
                 key={index}
               >
                 {ingredient}
