@@ -52,22 +52,24 @@ export default function Header() {
       ) : (
         <div
           id="header"
-          className="font-dancing-bold text-5xl h-32 flex items-center justify-between content-between  text-black bg-gradient-to-r from-blue-300 via-blue-200/70 to-blue-300"
+          className=" text-black bg-gradient-to-r from-blue-300 via-blue-200/70 to-blue-300"
         >
-          <Link
-            className="rounded-3xl text-3xl bg-blue-200 p-3 hover:bg-blue-100/80 transition-colors duration-150 ml-44 text-shadow-sm shadow-xl"
-            to="/"
-            onClick={handleClick}
-          >
-            Home
-          </Link>
-          <p className="text-5xl text-shadow-sm ml-[22px]">Grandma's Recipes</p>
-          <Link
-            className="rounded-full text-3xl bg-blue-200 p-4 mr-36 hover:bg-blue-100/80 transition-colors duration-150 text-shadow-sm shadow-xl "
-            to="/about"
-          >
-            About
-          </Link>
+          <div className="font-dancing-bold text-5xl h-32 flex items-center justify-between content-between">
+            <Link
+              className="rounded-3xl text-3xl bg-blue-200 p-3 hover:bg-blue-100/80 transition-colors duration-150  text-shadow-sm shadow-xl"
+              to="/"
+              onClick={handleClick}
+            >
+              Home
+            </Link>
+            <p className="text-5xl text-shadow-sm ">Grandma's Recipes</p>
+            <Link
+              className="rounded-3xl text-3xl bg-blue-200 p-4  hover:bg-blue-100/80 transition-colors duration-150 text-shadow-sm shadow-xl "
+              to="/about"
+            >
+              About
+            </Link>
+          </div>
         </div>
       )}
     </>
