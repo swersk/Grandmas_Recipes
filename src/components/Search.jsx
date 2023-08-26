@@ -27,7 +27,6 @@ export default function Search() {
 
   return (
     <div className="search-wrapper">
-      {/* <i className="fa-solid fa-magnifying-glass text-2xl text-black text-shadow-sm rounded-full bg-blue-200 p-4 hover:bg-blue-100/80 transition-colors duration-150 shadow-xl"></i> */}
       <i className="fa-solid fa-magnifying-glass text-2xl text-black transition-colors duration-150 shadow-xl"></i>
       <input
         type="text"
