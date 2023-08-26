@@ -4,11 +4,8 @@ import { RecipeContext, HomeContext } from "../App.jsx";
 export default function Search() {
   const [query, setQuery] = useState("");
   let recipeArr = useContext(RecipeContext);
-  const {
-    setFilteredRecipes,
-    setIsFiltered,
-    setIsHome,
-  } = useContext(HomeContext);
+  const { setFilteredRecipes, setIsFiltered, setIsHome } =
+    useContext(HomeContext);
 
   const handleChange = (e) => {
     if (e.target.value.length >= 3) {
@@ -29,17 +26,17 @@ export default function Search() {
   };
 
   return (
-    <>
-      <i className="fa-solid fa-magnifying-glass text-2xl ml-36 text-black text-shadow-sm rounded-full bg-blue-200 p-4 mr-32 hover:bg-blue-100/80 transition-colors duration-150 shadow-xl">
-        <input
-          type="text"
-          id="search-bar"
-          placeholder="Search..."
-          autoFocus
-          onChange={handleChange}
-          className="text-2xl mx-0 w-8 ml-2 font-satoshi-light text-shadow-sm  bg-blue-200 appearance-none"
-        />
-      </i>
-    </>
+    <div className="search-wrapper">
+      {/* <i className="fa-solid fa-magnifying-glass text-2xl text-black text-shadow-sm rounded-full bg-blue-200 p-4 hover:bg-blue-100/80 transition-colors duration-150 shadow-xl"></i> */}
+      <i className="fa-solid fa-magnifying-glass text-2xl text-black transition-colors duration-150 shadow-xl"></i>
+      <input
+        type="text"
+        id="search-bar"
+        placeholder="Search..."
+        autoFocus
+        onChange={handleChange}
+        className="text-2xl mx-0 w-8 ml-2 font-satoshi-light text-shadow-sm  bg-blue-200 appearance-none"
+      />
+    </div>
   );
 }

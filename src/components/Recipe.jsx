@@ -7,7 +7,6 @@ export default function Recipe() {
   const recipes = useContext(RecipeContext);
   const { setIsHome, setIsAbout } = useContext(HomeContext);
 
-
   const recipe = recipes.find(
     (r) => `${r.title.toLowerCase().replace(/\s+/g, "-")}` === recipeTitle
   );
@@ -23,19 +22,19 @@ export default function Recipe() {
 
   return (
     <>
-    <div className="recipe-container relative">
-      <div
-        style={{
-          backgroundImage: `url(${recipe.img})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center center",
-          opacity: "0.8",
-        }}
-        className="recipe-image text-5xl h-80 font-satoshi-medium flex justify-center items-center font-extrabold text-white shadow-lg"
-      >
-        {recipe.title}
-      </div>
+      <div className="recipe-container relative">
+        <div
+          style={{
+            backgroundImage: `url(${recipe.img})`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center center",
+            opacity: "0.8",
+          }}
+          className="recipe-image text-5xl h-80 font-satoshi-medium flex justify-center items-center font-extrabold text-white shadow-lg"
+        >
+          {recipe.title}
+        </div>
       </div>
 
       <div
@@ -64,7 +63,11 @@ export default function Recipe() {
           </h2>
           <ol className=" text-left text-xl font-satoshi-regular">
             {recipe.directions.map((direction, index) => {
-              return <li className="mb-4"key={index}>{direction}</li>;
+              return (
+                <li className="mb-4" key={index}>
+                  {direction}
+                </li>
+              );
             })}
           </ol>
         </div>
