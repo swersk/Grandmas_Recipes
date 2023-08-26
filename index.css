@@ -47,10 +47,17 @@
 
   #about-img {
     height: 300px;
+    justify-content: center;
+    align-items: center;
   }
 
-  #about-content {
-    font-size: 12px;
+  .text {
+    font-size: 6px;
+    height: 96%;
+  }
+
+  .content-wrapper {
+    height: 1300px;
   }
 }
 
